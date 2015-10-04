@@ -18,9 +18,14 @@
         </activity>
 
         <activity
-            android:name=".TestActivity"
+            android:name=".SimpleLinearLayoutActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".Card3GridLayoutActivity"
+            android:label="@string/app_name" >
+        </activity>
+
 
     </application>
 

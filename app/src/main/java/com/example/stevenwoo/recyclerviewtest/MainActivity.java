@@ -3,7 +3,6 @@ package com.example.stevenwoo.recyclerviewtest;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,18 +56,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        View view = findViewById(R.id.buttonTest);
+        View view = findViewById(R.id.buttonSimpleRecycleView);
         if( view != null ){
-            Button button = (Button)view.findViewById(R.id.buttonTest);
-            button.setOnClickListener(new View.OnClickListener() {
+            Button button1 = (Button)view.findViewById(R.id.buttonSimpleRecycleView);
+            button1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("test", "test");
-                    Intent i = new Intent(getApplicationContext(), TestActivity.class);
+                    Intent i = new Intent(getApplicationContext(), SimpleLinearLayoutActivity.class);
+                    startActivityForResult(i, 0);
+                }
+            });
+
+        }
+        Button button2 = (Button)findViewById(R.id.buttonCard3RecycleView);
+        if( button2 != null ) {
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), Card3GridLayoutActivity.class);
                     startActivityForResult(i, 0);
                 }
             });
         }
+
 
     }
 

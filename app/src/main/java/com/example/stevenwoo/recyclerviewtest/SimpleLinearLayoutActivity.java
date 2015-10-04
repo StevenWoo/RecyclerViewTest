@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 /**
  * Created by stevenwoo on 8/31/15.
  */
-public class TestActivity extends RecyclerViewActivity {
+public class SimpleLinearLayoutActivity extends RecyclerViewActivity {
     private static final String[] items={"lorem", "ipsum", "dolor",
             "sit", "amet",
             "consectetuer", "adipiscing", "elit", "morbi", "vel",
@@ -63,7 +63,6 @@ public class TestActivity extends RecyclerViewActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setLayoutManager(new LinearLayoutManager(this));
-//        setLayoutManager(new GridLayoutManager(this, 3));
         setAdapter(new IconicAdapter());
     }
 }
